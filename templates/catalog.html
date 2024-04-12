@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Каталог</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+<h1 style="margin-top:150px;" class="display-1 text-center">Путешествия по Амурской области</h1>
+<div style="margin-top:50px;" class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="static/img/img_1.png" class="card-img-top" alt="Картинка не нашлась">
+      <div class="card-body">
+        <h5 class="card-title">Хребет Тукурингра</h5>
+        <p class="card-text">Четырехдневный пеший маршрут протяженностью 30 километров для людей, уставших от городского шума и суеты в компании опытных гидов, которые расскажут вам много интересного о хребте и Зейском заповеднике.</p>
+        <p><a class="btn btn-danger" href="/card_tuc">Посмотреть детали »</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="static/img/img_2.jpg" class="card-img-top" alt="Картинка не нашлась">
+      <div class="card-body">
+        <h5 class="card-title">Михайловские столбы</h5>
+        <p class="card-text">«Михайловские столбы» – скалы каскада 16 утесов, которые находятся рядом с границей  Китая. Считается, что столбы появились от 115 до 67 млн лет назад, возможно, вследствие выхода лавы из разлома или вулкана.</p>
+        <p><a class="btn btn-danger" href="/card_mih">Посмотреть детали »</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="static/img/img_3.jpg" class="card-img-top" alt="Картинка не нашлась">
+      <div class="card-body">
+        <h5 class="card-title">Шамбала "Пинежье"</h5>
+        <p class="card-text">Завораживающие виды на водохранилище Нижне-Бурейской ГЭС, прогулка по подвесным мостам в месте тектонического разлома, чистейший воздух, увлекательная экскурсия и вкусный обед - всё это в нашем туре.</p>
+        <p><a class="btn btn-danger" href="/card_shambola">Посмотреть детали »</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="static/img/img_4.jpg" class="card-img-top" alt="Картинка не нашлась">
+      <div class="card-body">
+        <h5 class="card-title">Храмовые горы</h5>
+        <p class="card-text">Тайга, останцы древних "великанов", потрясающие виды с гор на водохранилище Бурейской ГЭС, вечером после похода жаркая баня, прохладная вода Буреи и никакой связи и интернета.</p>
+        <p><a class="btn btn-danger" href="/card_hramov">Посмотреть детали »</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

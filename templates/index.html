@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Онлайн магазин</title>
+{% endblock %}
+
+{% block body %}
+<main>
+  <div id="container">
+    <img id="image" src="static/img/Рисунок3.png"/>
+  </div>
+  <div class="b-example-divider"></div>
+    <div class="container pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-6 fw-normal text-body-emphasis">Всё для путешествий</h1>
+      <h4 class="fs-4 text-body-secondary">"Amur Compass" - это ваш проводник в мире Амурской области. Мы предлагаем разнообразные туры,
+          которые позволят вам погрузиться в богатое культурное наследие и потрясающую природу этого уникального места.
+          Мы специализируемся на создании незабываемых приключений и возможностей для исследования этого удивительного региона.
+      </h4>
+    </div>
+  <hr class="featurette-divider">
+  <br>
+  <div class="container">
+    <h1 style="margin-bottom:50px;" class="display-5 fw-normal text-body-emphasis text-center">Предложения недели
+      <svg class="link-danger" xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"></path>
+      </svg>
+    </h1>
+  <div class="row">
+      <div class="col-lg-4" align="center">
+        <svg class="bd-placeholder-img rounded-circle" width="190" height="190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+        <image x="0" y="0" width="160%" xlink:href="static/img/img_1.png" />
+        </svg>
+        <h2 class="fw-normal">Хребет Тукурингра</h2>
+        <p>Четырехдневный пеший маршрут протяженностью 30 километров для людей, уставших от городского шума и суеты в компании опытных гидов, которые расскажут вам много интересного о хребте и Зейском заповеднике.</p>
+        <p><a class="btn btn-secondary" href="/card_tuc">Посмотреть детали »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4" align="center">
+        <svg class="bd-placeholder-img rounded-circle" width="190" height="190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+         <image x="0" y="0" width="150%" xlink:href="static/img/img_3.jpg" />
+        </svg>
+        <h2 class="fw-normal">Шамбала "Пинежье"</h2>
+        <p>Pавораживающие виды на водохранилище Нижне-Бурейской ГЭС, прогулка по подвесным мостам в месте тектонического разлома, чистейший воздух, увлекательная экскурсия и вкусный обед - всё это в нашем туре.</p>
+        <p><a class="btn btn-danger" href="/card_shambola">Посмотреть детали »</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4" align="center">
+        <svg class="bd-placeholder-img rounded-circle" width="190" height="190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+          <image x="0" y="0" width="150%" xlink:href="static/img/img_2.jpg" />
+        </svg>
+        <h2 class="fw-normal">Михайловские столбы</h2>
+        <p>«Михайловские столбы» – скалы каскада 16 утесов, которые находятся рядом с границей  Китая. Считается, что столбы появились от 115 до 67 млн лет назад, возможно, вследствие выхода лавы из разлома или вулкана.</p>
+        <p><a class="btn btn-secondary" href="/card_mih">Посмотреть детали »</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div>
+    <h1 style="margin-bottom:40px; margin-top:70px" class="display-4 fw-normal text-body-emphasis text-center">Амурская область</h1>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Город Благовещенск</h2>
+        <p class="lead">Благовещенск является административным центром Амурской области. Город расположен на берегу реки Амур и имеет
+          уникальную планировку, с улицами, расположенными перпендикулярно друг другу, похожую на города Древнего Рима.<br>
+          <br>
+        Город имеет богатую историю, начиная с его основания в 1856 году. Здесь можно найти различные памятники архитектуры, которые отражают его прошлое.<br>
+          <br>
+        Близость с Китаем делает город уникальным местом, где смешиваются культуры и влияния обоих стран.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect>
+        <image x="0" y="0" width="125%" xlink:href="static/img/img_1.1.jpg" />
+        </svg>
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Космодром Восточный</h2>
+        <p class="lead">Космодром Восточный был открыт в 2011 году и стал важным объектом для запуска космических ракет и
+          спутников. Он был создан для разнообразных космических миссий, включая коммерческие и государственные запуски.<br>
+        <br>
+        Космодром Восточный является первым космодромом в России, который был полностью построен и разработан после распада Советского Союза.
+          Он представляет собой современный комплекс с современной инфраструктурой и технологиями.<br>
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect>
+        <image x="0" y="0" width="120%" xlink:href="static/img/img_3.1.jpg" />
+        </svg>
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">Зейский заповедник</h2>
+        <p class="lead">Зейский заповедник был создан в 1963 году и является одним из крупнейших заповедников в регионе.<br>
+          <br>
+          В заповеднике можно наблюдать уникальную природу и разнообразные виды животных. Например, в заповеднике находится
+          одно из крупнейших лотосовых насаждений, а также здесь строят свои гнезда журавли.<br>
+          <br>
+          Зейский заповедник является важным местом для сохранения биоразнообразия и охраны природы в регионе.
+          Он предоставляет уникальные возможности для научных исследований и экологического образования.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect>
+        <image x="0" y="0" width="125%" xlink:href="static/img/img_2.1.jpg" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="container px-4 py-5" id="featured-3">
+    <h1 class="display-4 fw-normal border-bottom link-light">Почему выбирают нас?</h1>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div class="feature-icon link-danger d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16">
+             <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17 1.247 0 3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z"/>
+          </svg>
+        </div>
+        <h3 class="fs-2 text-body-emphasis">Разнообразие маршрутов</h3>
+        <p>Компания предлагает различные маршруты, которые позволяют посетить разные города и достопримечательности
+            Амурской области. Вы сможете исследовать красоту природы, посетить исторические места и познакомиться с культурой и традициями этого региона.</p>
+      </div>
+      <div class="feature col">
+        <div class="feature-icon link-danger d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+            <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5M.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5"/>
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+          </svg>
+        </div>
+        <h3 class="fs-2 text-body-emphasis">Персональный подход</h3>
+        <p>Мы стремимся предоставить индивидуальный подход к каждому клиенту. Наша команда профессионалов поможет вам создать идеальный маршрут, учитывая ваши интересы, предпочтения и бюджет.</p>
+      </div>
+      <div class="feature col">
+        <div class="feature-icon link-danger d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-chat-heart-fill" viewBox="0 0 16 16">
+            <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15m0-9.007c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"></path>
+          </svg>
+        </div>
+        <h3 class="fs-2 text-body-emphasis ">Комфорт и безопасность</h3>
+        <p>Компания обеспечивает комфортные условия проживания и транспортировки во время туров, а также обеспечивает безопасность своих клиентов.</p>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

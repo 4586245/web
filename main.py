@@ -1,10 +1,11 @@
-from flask import Flask, render_template, url_for, request, redirect, flash
+from flask import Flask, render_template, url_for, request, redirect, flash, abort
 from werkzeug.security import generate_password_hash
 from data import db_session
 from data.users import User
 from data.comments import Comments
+from forms.comments import NewsForm
 from forms.user import RegisterForm, LoginForm
-from flask_login import LoginManager, login_user, logout_user, login_required
+from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
@@ -38,6 +39,62 @@ def login():
 def logout():
     logout_user()
     return redirect("/")
+
+
+@app.route('/comments', methods=['GET', 'POST'])
+@login_required
+def add_news():
+    form = NewsForm()
+    if form.validate_on_submit():
+        db_sess = db_session.create_session()
+        comments = Comments()
+        comments.title = form.title.data
+        comments.content = form.content.data
+        current_user.comments.append(comments)
+        db_sess.merge(current_user)
+        db_sess.commit()
+        return redirect('/comment')
+    return render_template('comments.html', form=form)
+
+
+@app.route('/comments/<int:id>', methods=['GET', 'POST'])
+@login_required
+def edit_news(id):
+    form = NewsForm()
+    if request.method == "GET":
+        db_sess = db_session.create_session()
+        comments = db_sess.query(Comments).filter(Comments.id == id, Comments.user == current_user).first()
+        if comments:
+            form.title.data = comments.title
+            form.content.data = comments.content
+        else:
+            abort(404)
+    if form.validate_on_submit():
+        db_sess = db_session.create_session()
+        comments = db_sess.query(Comments).filter(Comments.id == id, Comments.user == current_user).first()
+        if comments:
+            comments.title = form.title.data
+            comments.content = form.content.data
+            db_sess.commit()
+            return redirect('/comment')
+        else:
+            abort(404)
+    return render_template('comments.html',
+                           form=form)
+
+
+@app.route('/comments_delete/<int:id>', methods=['GET', 'POST'])
+@login_required
+def news_delete(id):
+    db_sess = db_session.create_session()
+    comments = db_sess.query(Comments).filter(Comments.id == id,
+                                              Comments.user == current_user).first()
+    if comments:
+        db_sess.delete(comments)
+        db_sess.commit()
+    else:
+        abort(404)
+    return redirect('/comment')
 
 
 def main():
@@ -113,4 +170,3 @@ def register():
 
 if __name__ == "__main__":
     main()
-    # app.run(debug=True)

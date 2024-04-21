@@ -26,7 +26,13 @@
             </p>
         {% endfor %}
     </h4>
+    <div class="mb-3">
+            <label class="form-label" for="customFile">Upload</label>
+            <input type="file" class="form-control" id="customFile">
+          </div>
     <p>{{ form.submit(type="submit", class="btn btn-lg btn-danger") }}</p>
     {{message}}
+
 </form>
+
 {% endblock %}

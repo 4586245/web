@@ -17,3 +17,4 @@ class Comments(SqlAlchemyBase):
     user_id = sqlalchemy.Column(sqlalchemy.Integer,
                                 sqlalchemy.ForeignKey("users.id"))
     user = orm.relationship('User')
+    images = sqlalchemy.Column(sqlalchemy.Text)

@@ -127,12 +127,10 @@ def comment():
 
 @app.route('/contact')
 def contact():
-    map_request = "http://static-maps.yandex.ru/1.x/?ll=127.540873,50.256806&spn=0.002,0.002&l=map"
+    map_request = "http://static-maps.yandex.ru/1.x/?lang=ru_RU&pt=127.540873,50.256806,pm2rdm&ll=127.540873,50.256806&spn=0.002,0.002&l=map"
     response = requests.get(map_request)
-
     if not response:
         sys.exit(1)
-
     # Запишем полученное изображение в файл.
     map_file = "static/img/photo/map.png"
     with open(map_file, "wb") as file:

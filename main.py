@@ -110,6 +110,7 @@ def index():
     return render_template('index.html')
 
 
+
 @app.route('/catalog')
 def catalog():
     return render_template('catalog.html')
@@ -155,6 +156,10 @@ def contact():
     with open(map_file, "wb") as file:
         file.write(response.content)
     return render_template('contact.html')
+
+@app.route('/order')
+def order():
+    return render_template('orders.html')
 
 
 @app.route('/register', methods=['GET', 'POST'])

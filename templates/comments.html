@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-<form class="container" action="" method="post">
+<form class="container" enctype="multipart/form-data" action="" method="post">
     <h1 style="margin-top:150px; margin-bottom:60px;" class="display-2">Поделись впечатлениями</h1>
     {{ form.hidden_tag() }}
     <h4>
@@ -28,7 +28,7 @@
     </h4>
     <div class="mb-3">
             <label class="form-label" for="customFile">Upload</label>
-            <input type="file" class="form-control" id="customFile">
+            <input type="file" class="form-control" id="customFile" name="file">
           </div>
     <p>{{ form.submit(type="submit", class="btn btn-lg btn-danger") }}</p>
     {{message}}

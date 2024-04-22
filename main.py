@@ -140,6 +140,7 @@ def card_hramov():
 def comment():
     db_sess = db_session.create_session()
     comments = db_sess.query(Comments).filter()
+
     return render_template('comment.html', comments=comments)
 
 

@@ -45,7 +45,6 @@ def logout():
     return redirect("/")
 
 
-
 @app.route('/comments', methods=['GET', 'POST'])
 @login_required
 def add_news():
@@ -89,7 +88,6 @@ def main():
 @app.route('/')
 def index():
     return render_template('index.html')
-
 
 
 @app.route('/catalog')
@@ -136,10 +134,6 @@ def contact():
     with open(map_file, "wb") as file:
         file.write(response.content)
     return render_template('contact.html')
-
-@app.route('/order')
-def order():
-    return render_template('orders.html')
 
 
 @app.route('/register', methods=['GET', 'POST'])

@@ -15,7 +15,7 @@
   </a>
 </div>
 {% endif %}
-{% for item in comments%}
+{% for item in comments[::-1]%}
 <div style="margin-bottom:20px;" class="col-5 border rounded container">
   <h1 class="fw-normal px-2">{{item.title}}</h1>
   <div class="px-3">
@@ -23,7 +23,7 @@
   </div>
   <div class="bd-example m-0 border-0">
         <svg class="bd-placeholder-img img-thumbnail" width="300" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <image x="0" y="0" width="100%" xlink:href="static/img_client/{{item.images}}" />
+        <image style="width:120%" x="0" y="0" xlink:href="static/img_client/{{item.images}}" />
         </svg>
        </div>
   <div class="px-2">
@@ -31,9 +31,6 @@
   </div>
   {% if current_user.is_authenticated and current_user == item.user %}
     <div style="margin-bottom:15px;">
-        <a href="/comments/{{ item.id }}" class="btn btn-danger">
-            Изменить
-        </a>
         <a href="/comments_delete/{{ item.id }}" class="btn btn-outline-danger">
             Удалить
         </a>

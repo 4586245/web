@@ -1,17 +1,10 @@
-blinker
-click
-colorama
 Flask
 Flask-Login
 Flask-WTF
-greenlet
 itsdangerous
-Jinja2
-MarkupSafe
 setuptools
 SQLAlchemy
 typing_extensions
 Werkzeug
-wheel
 WTForms
 requests

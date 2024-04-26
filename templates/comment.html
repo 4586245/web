@@ -5,13 +5,16 @@
 {% endblock %}
 
 {% block body %}
-<h1 class="display-1 text-body-emphasis text-center" style="margin-top:150px; margin-bottom:60px;">Отзывы наших клиентов:<br>Ваши слова - наша мотивация!</h1>
+<h1 class="display-1 text-body-emphasis text-center" style="margin-top:150px; margin-bottom:60px;">Отзывы наших
+  клиентов:<br>Ваши слова - наша мотивация!</h1>
 {% if current_user.is_authenticated %}
 <div class="container text-center">
   <a style="margin-bottom:30px;" href="comments" class="btn btn-lg btn-danger">Добавить отзыв
-  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
-  </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-plus-lg"
+         viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+    </svg>
   </a>
 </div>
 {% endif %}
@@ -22,20 +25,21 @@
     <h3 class="fw-light">{{item.content}}</h3>
   </div>
   <div class="bd-example m-0 border-0">
-        <svg class="bd-placeholder-img img-thumbnail" width="300" height="200" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <image style="width:120%" x="0" y="0" xlink:href="static/img_client/{{item.images}}" />
-        </svg>
-       </div>
+    <svg class="bd-placeholder-img img-thumbnail" width="300" height="200" xmlns="http://www.w3.org/2000/svg" role="img"
+         preserveAspectRatio="xMidYMid slice" focusable="false">
+      <image style="width:120%" x="0" y="0" xlink:href="static/img_client/{{item.images}}"/>
+    </svg>
+  </div>
   <div class="px-2">
     <p>Автор - {{item.user.name}}<br>Дата написания - {{item.created_date}}</p>
   </div>
   {% if current_user.is_authenticated and current_user == item.user %}
-    <div style="margin-bottom:15px;">
-        <a href="/comments_delete/{{ item.id }}" class="btn btn-outline-danger">
-            Удалить
-        </a>
-    </div>
-{% endif %}
+  <div style="margin-bottom:15px;">
+    <a href="/comments_delete/{{ item.id }}" class="btn btn-outline-danger">
+      Удалить
+    </a>
+  </div>
+  {% endif %}
 </div>
 {% endfor %}
 {% endblock %}

@@ -1,9 +1,9 @@
 Flask
-Flask-Login==0.6.3
-Flask-WTF==1.2.1
-Jinja2==3.1.3
-requests==2.31.0
-SQLAlchemy==2.0.29
+Flask-Login
+Flask-WTF
+Jinja2
+requests
+SQLAlchemy
 urllib3==1.26.6
-Werkzeug==3.0.2
-WTForms==3.1.2
+Werkzeug
+WTForms

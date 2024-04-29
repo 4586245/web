@@ -8,24 +8,17 @@
 Продемонстрировать свои навыки и умения по работe c созданием сайтов.
 
 
-спользованные технологий:
-blinker           1.7.0
-click             8.1.7
-colorama          0.4.6
-Flask             3.0.3
-Flask-Login       0.6.3
-Flask-WTF         1.2.1
-greenlet          3.0.3
-itsdangerous      2.2.0
-Jinja2            3.1.3
-MarkupSafe        2.1.5
-pip               23.2.1
-setuptools        68.2.0
-SQLAlchemy        2.0.29
-typing_extensions 4.11.0
-Werkzeug          3.0.2
-wheel             0.41.2
-WTForms           3.1.2
+Использованные технологий:
+Flask
+Flask-Login
+Flask-WTF
+Jinja2
+requests
+SQLAlchemy
+urllib3==1.26.6
+Werkzeug
+WTForms
+python-dotenv
 
 Сборка и запуск проекта:
 --|
@@ -53,3 +46,5 @@ WTForms           3.1.2
 
 Перспективы для развития проекта:
 В дальнейшем будет возможность добавлять новые туры и расширять количество пользователей путем улучшенгия качества сайта
+
+Ссылка на сайт: https://plump-dot-seaplane.glitch.me

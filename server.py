@@ -114,6 +114,14 @@ def card_shambola():
 def card_hramov():
     return render_template('card_hramov.html')
 
+@app.route('/card_zmeinay')
+def card_zmeinay():
+    return render_template('card_zmeinay.html')
+
+@app.route('/card_myrav')
+def card_myrav():
+    return render_template('card_myrav.html')
+
 
 @app.route('/comment')
 def comment():
